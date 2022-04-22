@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: redis-store
-        image: index.docker.io/sourcegraph/redis-store:insiders@sha256:fc49ad0f830a2cc03aadf660010f1134ef98f72bd90458c130cfcc9abee20cca
+        image: index.docker.io/sourcegraph/redis-store:insiders@sha256:4937fdf7d25350cb3e1d9ac95018b2b2eea4af5464ca9874ae54e6a03e413d5e
         terminationMessagePolicy: FallbackToLogsOnError
         livenessProbe:
           initialDelaySeconds: 30
