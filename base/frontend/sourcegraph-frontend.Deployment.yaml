@@ -29,7 +29,7 @@ spec:
     spec:
       initContainers:
       - name: migrator
-        image: index.docker.io/sourcegraph/migrator:insiders@sha256:41dd9090988e3282ddb204af8e2afd5d8e7f1a937fabe0c2dfdc5466f98518f5
+        image: index.docker.io/sourcegraph/migrator:insiders@sha256:ccfaa8bdfac120e47b9b4da8910df6e148b3f978665d9dd062074f90d204439f
         args: ["up"]
         resources:
           limits:
@@ -63,7 +63,7 @@ spec:
           value: sg
       containers:
       - name: frontend
-        image: index.docker.io/sourcegraph/frontend:insiders@sha256:c726851b964c7feff04f89f3408877baab83a15b29a76d35cb4a7b553ecce84a
+        image: index.docker.io/sourcegraph/frontend:insiders@sha256:95cfa0e2fdd11b63d36a79dcd23083ae3ed4b4ce29666aaa2917b6679e7f0a12
         args:
         - serve
         env:
@@ -139,7 +139,7 @@ spec:
         - mountPath: /mnt/cache
           name: cache-ssd
       - name: jaeger-agent
-        image: index.docker.io/sourcegraph/jaeger-agent:insiders@sha256:fd0f2b8c8cff265ecacecf6c8b0e2a1b0fbf493da3dba20df9ba9ad822b774eb
+        image: index.docker.io/sourcegraph/jaeger-agent:insiders@sha256:2a21169851abe63df88b09ccb19ca8029d51da77c1653318fe20dadd85da6b29
         env:
           - name: POD_NAME
             valueFrom:
